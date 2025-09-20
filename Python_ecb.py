@@ -6,18 +6,20 @@ Does ECB Policy Drive Banks to Prefer Corporate Loans Over Government Bonds?
 
 Author: Felipe Fernando Calvo de Freitas
 
+The programming format of this project was adapted for Google Collab.
+
 """
 
 
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
+import statsmodels.api as sm
 from pandasdmx import Request
 from pandas_datareader import data as pdr
 from datetime import datetime
 from statsmodels.tsa.api import VAR
 from statsmodels.tsa.stattools import adfuller
-import statsmodels.api as sm
 from statsmodels.tsa.stattools import grangercausalitytests
 
 
