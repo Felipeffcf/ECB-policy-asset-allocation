@@ -6,7 +6,6 @@ Does ECB Policy Drive Banks to Prefer Corporate Loans Over Government Bonds?
 
 Author: Felipe Fernando Calvo de Freitas
 
-Date: 09/05/2025
 """
 
 
@@ -16,6 +15,12 @@ import seaborn as sns
 from pandasdmx import Request
 from pandas_datareader import data as pdr
 from datetime import datetime
+from statsmodels.tsa.api import VAR
+from statsmodels.tsa.stattools import adfuller
+import statsmodels.api as sm
+from statsmodels.tsa.stattools import grangercausalitytests
+
+
 
 # ECB SDMX request
 ecb = Request('ECB')
@@ -92,7 +97,6 @@ plt.ylabel("Corporate Loans")
 plt.savefig('scatterplot_crowding_out.jpg', format='jpg')
 plt.show()
 
-import statsmodels.api as sm
 
 # OLS regression
 X = df[['Gov_Bonds', 'Refi_Rate']]
@@ -105,17 +109,13 @@ print(model.summary())
 # More visual version
 print(model.summary().tables[1])
 
-from statsmodels.tsa.stattools import grangercausalitytests
 
 # Granger causality tests: Does X Granger-cause Y? Testing 6 lags
-
 max_lags = 6
 print("\n=== Granger Causality: Do Gov_Bonds & Refi_Rate 'cause' Corp_Loans? ===")
 grangercausalitytests(df[['Corp_Loans', 'Gov_Bonds']], maxlag=max_lags, verbose=True)
 grangercausalitytests(df[['Corp_Loans', 'Refi_Rate']], maxlag=max_lags, verbose=True)
 
-from statsmodels.tsa.api import VAR
-from statsmodels.tsa.stattools import adfuller
 
 # Stationarity check
 def adf_test(series, title=''):
@@ -149,11 +149,3 @@ fig.tight_layout()
 fig.savefig("irf_plot.jpg", format="jpg", dpi=300)
 plt.show()
 
-# Download all files
-from google.colab import files
-
-files.download('time_series_plot.jpg')
-files.download('correlation_heatmap.jpg')
-files.download('scatterplot_crowding_out.jpg')
-files.download('merged_data.xlsx')
-files.download("irf_plot.jpg")
