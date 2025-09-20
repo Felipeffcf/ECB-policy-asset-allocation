@@ -75,11 +75,12 @@ The analysis combines descriptive exploration with econometric modelling:
 ## Results
 
 ### Time Series of Key Variables
-![Time Series](figures/TS_plot.jpg)
+![Time Series](Figures/TS_plot.jpg)
 
 ### Crowding-Out Hypothesis
-![Crowding-Out](figures/Scatterplot_crowdout.jpg)
+![Crowding-Out](Figures/Scatterplot_crowdout.jpg)
 
 ### Impulse Response Functions
-![IRFs](figures/IRF_plot.jpg)
+![Impulse Responses](Figures/IRF_plot.jpg)
+
 
