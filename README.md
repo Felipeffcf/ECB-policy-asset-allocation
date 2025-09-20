@@ -70,9 +70,7 @@ The analysis combines descriptive exploration with econometric modelling:
   - Policy rate shocks have limited direct impact.  
   - Lending shocks reduce bond holdings over time, reinforcing the asset substitution hypothesis.
 
----
-
-## Results
+## Graphically
 
 ### Time Series of Key Variables
 ![Time Series](Figures/TS_plot.jpg)
