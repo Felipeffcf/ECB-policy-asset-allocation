@@ -71,3 +71,15 @@ The analysis combines descriptive exploration with econometric modelling:
   - Lending shocks reduce bond holdings over time, reinforcing the asset substitution hypothesis.
 
 ---
+
+## Results
+
+### Time Series of Key Variables
+![Time Series](figures/TS_plot.jpg)
+
+### Crowding-Out Hypothesis
+![Crowding-Out](figures/Scatterplot_crowdout.jpg)
+
+### Impulse Response Functions
+![IRFs](figures/IRF_plot.jpg)
+
