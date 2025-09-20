@@ -71,10 +71,3 @@ The analysis combines descriptive exploration with econometric modelling:
   - Lending shocks reduce bond holdings over time, reinforcing the asset substitution hypothesis.
 
 ---
-
-## ⚙️ How to run
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Felipeffcf/ECB-policy-asset-allocation.git
-   cd ECB-policy-asset-allocation
